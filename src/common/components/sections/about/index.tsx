@@ -1,6 +1,6 @@
 "use client";
 
-import portfolioImg from "@/../public/images/photo.jpg";
+import portfolioImg from "../../../../../public/images/photo.jpg";
 import { smoothScrollTo } from "@/common/lib/utils";
 import SectionDivider from "@/common/components/shared/section-divider";
 import SectionHeading from "@/common/components/shared/section-heading";

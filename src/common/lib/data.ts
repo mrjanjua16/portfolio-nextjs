@@ -1,16 +1,16 @@
 import React from 'react';
 
-import campwithusImg from '@/../public/images/camp-with-us.png';
-import carcatalogImg from '@/../public/images/car-catalog.png';
-import erpImage from '@/../public/images/erp-image.png';
-import expImage from '@/../public/images/exp-web2.png'
-import blogImage from '@/../public/images/blog-admin-control-panel4.png'
-import authImage from '@/../public/images/blog-admin-control-panel5.png'
-import liquidityPoolImage from '@/../public/images/liquidity-pool.jpg'
-import eventImage from '@/../public/images/event-app2.png'
-import filedriveImg from '@/../public/images/file-drive.png';
-import projectmanagementImg from '@/../public/images/project-management.png';
-import reactfoodImg from '@/../public/images/react-food.png';
+import campwithusImg from '../../../public/images/camp-with-us.png';
+import carcatalogImg from '../../../public/images/car-catalog.png';
+import erpImage from '../../../public/images/erp-image.png';
+import expImage from '../../../public/images/exp-web2.png'
+import blogImage from '../../../public/images/blog-admin-control-panel4.png'
+import authImage from '../../../public/images/blog-admin-control-panel5.png'
+import liquidityPoolImage from '../../../public/images/liquidity-pool.jpg'
+import eventImage from '../../../public/images/event-app2.png'
+import filedriveImg from '../../../public/images/file-drive.png';
+import projectmanagementImg from '../../../public/images/project-management.png';
+import reactfoodImg from '../../../public/images/react-food.png';
 import {
   BookIcon,
   BriefcaseBusinessIcon,

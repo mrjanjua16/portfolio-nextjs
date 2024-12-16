@@ -9,6 +9,7 @@ import { motion, useAnimation } from "framer-motion";
 import { Github, Linkedin } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import toast from "react-hot-toast";
 
 export default function Hero() {
   const ref = useRef<HTMLElement | null>(null);
@@ -64,9 +65,6 @@ export default function Hero() {
     }
 
   }, [activeSection,videoRef]);
-
-
-
 
   return (
     <>

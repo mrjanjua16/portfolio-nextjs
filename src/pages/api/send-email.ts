@@ -1,4 +1,4 @@
-import { MailerSend, EmailParams, Sender, Recipient } from 'mailersend';
+import { Resend } from "resend";
 
 export default async function handler(req: any, res: any) {
 
@@ -8,10 +8,6 @@ export default async function handler(req: any, res: any) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const mailerSend = new MailerSend({
-    apiKey: process.env.API_KEY || '',
-  });
-
   const { senderEmail, message } = req.body;
 
   if (!senderEmail || !message) {
@@ -20,24 +16,14 @@ export default async function handler(req: any, res: any) {
       .json({ error: 'Both email and message are required.' });
   }
 
-  const sentFrom = new Sender("MS_WshbQT@trial-3yxj6ljr51x4do2r.mlsender.net", "Portfolio Contact");
+  const resend = new Resend(process.env.RESEND_API)
 
-  const recipients = [new Recipient('imubashirahmad@gmail.com')];
-
-  const emailParams = new EmailParams()
-    .setFrom(sentFrom)
-    .setTo(recipients)
-    .setReplyTo(new Sender(senderEmail))
-    .setSubject(`Portfolio Contact Form ${senderEmail}`)
-    .setHtml(`
-      <h2>New Contact Form Submission</h2>
-      <p><strong>From:</strong> ${senderEmail}</p>
-      <p><strong>Message:</strong></p>
-      <p>${message}</p>
-    `)
-    .setText(`From: ${senderEmail}\n\nMessage:\n${message}`);
-
-    const response = await mailerSend.email.send(emailParams);
+  const response = await resend.emails.send({
+    from: 'onboarding@resend.dev',
+    to: 'imubashirahmad@gmail.com',
+    subject: `Contact Form from ${senderEmail}`,
+    html: message
+  })
 
     res.status(200).json({ message: response });
   } catch (error) {

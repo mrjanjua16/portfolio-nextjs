@@ -47,6 +47,7 @@ export const links = [
 export const experiencesData = [
   {
     title: 'Full Stack Developer',
+    company: "Sparking Asia",
     location: 'Rawalpindi, Pakistan',
     description: `Full-stack developer with expertise in React, TypeScript, AdonisJS, and multiple database systems, specializing in scalable web applications. Core competencies include frontend (React ecosystem, UI libraries), backend (AdonisJS, ORMs), and databases (PostgreSQL,MySQL, MongoDB). Led development of comprehensive ERP system with modules for user/team management, project tracking, and automated payroll. Built automated invoicing platform with Stripe integration and journals management system using modern tech stack. Implemented secure authentication (RBAC), third-party integrations, and followed Agile practices across all projects.`,
     icon: React.createElement(BriefcaseBusinessIcon),
@@ -54,6 +55,7 @@ export const experiencesData = [
   },
   {
     title: 'MERN Stack Developer',
+    company: "Ezitech Institute",
     location: 'Rawalpindi, Pakistan',
     description: `Full Stack MERN Developer Intern focusing on web application development using MongoDB, Express.js, React, and Node.js.
 Frontend expertise includes React (Hooks, Context API, Redux), responsive design with CSS Grid/Flexbox, and modern UI libraries (Tailwind CSS, Material-UI).
@@ -65,6 +67,7 @@ Developed strong time management skills and adaptability to new technologies thr
   },
   {
     title: 'Implementation Specialist',
+    company: "Sequel Technologies",
     location: 'Rawalpindi, Pakistan',
     description: `Led the implementation of EHR software solutions, ensuring successful deployment and alignment with client needs. Collaborated with clients to identify requirements, analyzed existing systems, and provided recommendations. Coordinated with cross-functional teams, managed multiple projects, and delivered on time and within budget. Provided end-user training and support, conducted post-implementation assessments, and developed best practices to enhance implementation efficiency. Contributed feedback to product development based on client experiences.`,
     icon: React.createElement(LaptopMinimalIcon),
@@ -72,6 +75,7 @@ Developed strong time management skills and adaptability to new technologies thr
   },
   {
     title: 'Graphics Designer',
+    company: "Freelance",
     location: 'Islamabad, Pakistan',
     description: `Produced motion graphics projects, including logo animations and explainer videos, using Adobe After Effects and Vyond. Performed photo editing and designed banners, posters, and flyers with Adobe Photoshop and Illustrator. Collaborated with clients to meet their vision, managed multiple projects, and ensured on-time, within-budget delivery. Demonstrated expertise in motion graphics, 2D animation, and photo editing. Maintained strong client communication, resulting in repeat business and referrals.`,
     icon: React.createElement(LaptopMinimalIcon),
@@ -79,6 +83,7 @@ Developed strong time management skills and adaptability to new technologies thr
   },
   {
     title: 'Lead Game Developer',
+    company: "Digital Freaks",
     location: 'Rawalpindi, Pakistan',
     description: `Led a team of game developers in Unity-based game projects, managing workflow, and collaborating with designers, artists, and developers to ensure timely and budget-compliant delivery. Conducted code reviews, maintained high-quality standards, and contributed to technical documentation. Demonstrated expertise in Unity, solving technical challenges, and providing mentorship to team members for their professional growth.`,
     icon: React.createElement(LaptopMinimalIcon),

@@ -11,6 +11,7 @@ import { useHasMounted, useSectionInView } from '@/common/lib/hooks';
 import SectionHeading from '@/common/components/shared/section-heading';
 import { experiencesData } from '@/common/lib/data';
 import SectionDivider from '@/common/components/shared/section-divider';
+import { Building2, IdCard, MapPinned } from 'lucide-react';
 
 export default function Experience() {
   const { ref } = useSectionInView('experience');
@@ -55,11 +56,23 @@ export default function Experience() {
                 }}
                 className="hover:scale-[1.02] dark:hover:bg-white/10"
               >
-                <h3 className="font-semibold capitalize">{item.title}</h3>
-                <p className="!mt-0 font-normal">{item.location}</p>
-                <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                  {item.description}
-                </p>
+                <div className="flex items-center">
+                  <span className="mr-2"><IdCard /></span>
+                  <h3 className="text-lg font-semibold capitalize text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100">{item.title}</h3>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-2"><Building2 /></span>
+                  <h3 className="text-lg font-semibold capitalize text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100">{item.company}</h3>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-2"><MapPinned /></span>
+                  <p className="mt-1 text-sm font-normal text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-500">{item.location}</p>
+                </div>
+                <div className="flex items-center">
+                  <p className="mt-2 text-sm font-normal text-gray-700 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-400">
+                    {item.description}
+                  </p>
+                </div>
               </VerticalTimelineElement>
             </React.Fragment>
           ))}

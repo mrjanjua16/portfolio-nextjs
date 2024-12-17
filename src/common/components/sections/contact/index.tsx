@@ -89,8 +89,8 @@ export default function Contact() {
   };
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/yourusername', index: 0 },
-    { icon: Linkedin, href: 'https://linkedin.com/in/yourusername', index: 1 },
+    { icon: Github, href: 'https://github.com/mrjanjua16', index: 0 },
+    { icon: Linkedin, href: 'https://linkedin.com/in/mrjanjua', index: 1 },
     { icon: Mail, href: 'mailto:imubashirahmad@gmail.com', index: 2 },
   ];
 

@@ -1,13 +1,13 @@
-'use client'
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Github, Linkedin, Mail, Loader2 } from "lucide-react";
-import toast from "react-hot-toast";
+'use client';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Github, Linkedin, Mail, Loader2 } from 'lucide-react';
+import toast from 'react-hot-toast';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ senderEmail: "", message: "" });
+  const [formData, setFormData] = useState({ senderEmail: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [focusedField, setFocusedField] = useState(null);
+  const [focusedField, setFocusedField] = useState<string | null>(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -15,9 +15,9 @@ export default function Contact() {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
+        delayChildren: 0.3,
+      },
+    },
   };
 
   const itemVariants = {
@@ -25,21 +25,21 @@ export default function Contact() {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { type: "spring", stiffness: 100 }
-    }
+      transition: { type: 'spring', stiffness: 100 },
+    },
   };
 
   const socialIconVariants = {
     hidden: { scale: 0, rotate: -180 },
-    visible: (i:any) => ({
+    visible: (i: any) => ({
       scale: 1,
       rotate: 0,
       transition: {
-        type: "spring",
+        type: 'spring',
         stiffness: 100,
-        delay: i * 0.1
-      }
-    })
+        delay: i * 0.1,
+      },
+    }),
   };
 
   const formContainerVariants = {
@@ -48,50 +48,50 @@ export default function Contact() {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
+        type: 'spring',
         damping: 20,
-        stiffness: 100
-      }
-    }
+        stiffness: 100,
+      },
+    },
   };
 
   const inputVariants = {
-    focused: { scale: 1.02, boxShadow: "0 0 20px rgba(59, 130, 246, 0.2)" },
-    unfocused: { scale: 1, boxShadow: "0 0 0px rgba(59, 130, 246, 0)" }
+    focused: { scale: 1.02, boxShadow: '0 0 20px rgba(59, 130, 246, 0.2)' },
+    unfocused: { scale: 1, boxShadow: '0 0 0px rgba(59, 130, 246, 0)' },
   };
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     if (!formData.senderEmail || !formData.message) {
-      toast.error("Please fill out all fields.");
+      toast.error('Please fill out all fields.');
       return;
     }
 
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        toast.success("Message sent successfully!");
-        setFormData({ senderEmail: "", message: "" });
+        toast.success('Message sent successfully!');
+        setFormData({ senderEmail: '', message: '' });
       } else {
-        toast.error("Failed to send message.");
+        toast.error('Failed to send message.');
       }
     } catch (error) {
-      toast.error("Something went wrong. Please try again.");
+      toast.error('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/yourusername", index: 0 },
-    { icon: Linkedin, href: "https://linkedin.com/in/yourusername", index: 1 },
-    { icon: Mail, href: "mailto:imubashirahmad@gmail.com", index: 2 }
+    { icon: Github, href: 'https://github.com/yourusername', index: 0 },
+    { icon: Linkedin, href: 'https://linkedin.com/in/yourusername', index: 1 },
+    { icon: Mail, href: 'mailto:imubashirahmad@gmail.com', index: 2 },
   ];
 
   return (
@@ -103,15 +103,16 @@ export default function Contact() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center space-y-8 text-center">
-          <motion.div
-            className="space-y-4"
-            variants={itemVariants}
-          >
+          <motion.div className="space-y-4" variants={itemVariants}>
             <motion.h2
               className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-[#ffa781]"
               animate={{
-                backgroundPosition: ["0%", "100%"],
-                transition: { duration: 8, repeat: Infinity, repeatType: "reverse" }
+                backgroundPosition: ['0%', '100%'],
+                transition: {
+                  duration: 8,
+                  repeat: Infinity,
+                  repeatType: 'reverse',
+                },
               }}
             >
               Let's Connect
@@ -120,7 +121,8 @@ export default function Contact() {
               className="mx-auto max-w-[700px] text-gray-600 dark:text-white text-lg"
               variants={itemVariants}
             >
-              Have a project in mind? Let's collaborate and create something amazing together.
+              Have a project in mind? Let's collaborate and create something
+              amazing together.
             </motion.p>
           </motion.div>
 
@@ -137,7 +139,7 @@ export default function Contact() {
                 whileHover={{
                   scale: 1.1,
                   rotate: 15,
-                  transition: { type: "spring", stiffness: 300 }
+                  transition: { type: 'spring', stiffness: 300 },
                 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -165,15 +167,15 @@ export default function Contact() {
                     placeholder="your@email.com"
                     required
                     value={formData.senderEmail}
-                    onChange={(e) => setFormData({ ...formData, senderEmail: e.target.value })}
-                    onFocus={() => setFocusedField("email")}
+                    onChange={(e) =>
+                      setFormData({ ...formData, senderEmail: e.target.value })
+                    }
+                    onFocus={() => setFocusedField('email')}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400
-                             bg-transparent dark:bg-gray-800 transition-all duration-300
-                             dark:placeholder-gray-400"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 bg-transparent dark:bg-gray-800 transition-all duration-300 dark:placeholder-gray-400"
                     variants={inputVariants}
-                    animate={focusedField === "email" ? "focused" : "unfocused"}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    animate={focusedField === 'email' ? 'focused' : 'unfocused'}
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                   />
                 </motion.div>
                 <motion.div className="space-y-2">
@@ -182,16 +184,20 @@ export default function Contact() {
                     placeholder="Your message..."
                     required
                     value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    onFocus={() => setFocusedField("message")}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
+                    onFocus={() => setFocusedField('message')}
                     onBlur={() => setFocusedField(null)}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700
                              focus:outline-none focus:border-blue-500 dark:focus:border-blue-400
                              bg-transparent dark:bg-gray-800 transition-all duration-300
                              dark:placeholder-gray-400 min-h-[150px] resize-none"
                     variants={inputVariants}
-                    animate={focusedField === "message" ? "focused" : "unfocused"}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    animate={
+                      focusedField === 'message' ? 'focused' : 'unfocused'
+                    }
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                   />
                 </motion.div>
                 <motion.button

@@ -19,7 +19,7 @@ export default function Footer() {
                 href="#contact"
                 className="hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:transition-all before:duration-300 text-black hover:text-white hover:bg-green-400 before:hover:bg-green-500 relative inline-block hover:scale-105 transform transition-transform">
+                <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:transition-all before:duration-300 text-black hover:text-white hover:bg-green-400 before:hover:bg-green-500 dark:text-white relative inline-block hover:scale-105 transform transition-transform">
                   <span className="relative animate-pulse hover:animate-none">
                     Contact
                   </span>
@@ -31,7 +31,7 @@ export default function Footer() {
                 href="#projects"
                 className="rounded-sm dark:hover:text-white transition-colors"
               >
-                <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:transition-all before:duration-300 text-black hover:text-white hover:bg-green-400 before:hover:bg-green-500 relative inline-block hover:scale-105 transform transition-transform">
+                <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:transition-all before:duration-300 text-black hover:text-white hover:bg-green-400 before:hover:bg-green-500 dark:text-white relative inline-block hover:scale-105 transform transition-transform">
                   <span className="relative animate-pulse hover:animate-none">
                     Projects
                   </span>

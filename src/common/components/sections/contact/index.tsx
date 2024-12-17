@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Mail, Loader2 } from 'lucide-react';
 import toast from 'react-hot-toast';
+import { useSectionInView } from '@/common/lib/hooks';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ senderEmail: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
+  const { ref } = useSectionInView('contact');
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -96,7 +98,9 @@ export default function Contact() {
 
   return (
     <motion.section
-      className="min-h-screen w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800"
+      id="contact"
+      ref={ref}
+      className="min-h-screen w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-darkBg dark:to-darkBg/95 dark:text-white"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -170,7 +174,7 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, senderEmail: e.target.value })
                     }
-                    onFocus={() => setFocusedField('email')}
+                    onFocus={() => setFocusedField('message')}
                     onBlur={() => setFocusedField(null)}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 bg-transparent dark:bg-gray-800 transition-all duration-300 dark:placeholder-gray-400"
                     variants={inputVariants}
@@ -187,7 +191,7 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    onFocus={() => setFocusedField('message')}
+                    onFocus={() => setFocusedField('email')}
                     onBlur={() => setFocusedField(null)}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700
                              focus:outline-none focus:border-blue-500 dark:focus:border-blue-400

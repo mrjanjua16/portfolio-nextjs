@@ -151,7 +151,7 @@ export default function Hero() {
               </a>
 
               <a
-                className="borderBlack group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-7 py-3 text-black outline-none transition hover:bg-green-400 hover:text-white hover:dark:text-white dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:w-auto"
+                className="borderBlack group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-7 py-3 text-black outline-none transition hover:bg-green-400 hover:text-white hover:dark:text-white dark:bg-white/10 dark:text-white dark:hover:bg-green-400 sm:w-auto"
                 href="/mubashir-ahmad.pdf"
                 download
               >
@@ -160,14 +160,14 @@ export default function Hero() {
 
               <div className="flex gap-2">
                 <a
-                  className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-black transition hover:bg-green-400 hover:text-white dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
+                  className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-black transition hover:bg-green-400 hover:text-white dark:bg-white/10 dark:text-white/60 dark:hover:bg-green-400"
                   href="https://www.linkedin.com/in/mrjanjua/"
                   target="_blank"
                 >
                   <Linkedin />
                 </a>
                 <a
-                  className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-black transition hover:bg-green-400 hover:text-white dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
+                  className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-black transition hover:bg-green-400 hover:text-white dark:bg-white/10 dark:text-white/60 dark:hover:bg-green-400"
                   href="https://github.com/mrjanjua16"
                   target="_blank"
                 >

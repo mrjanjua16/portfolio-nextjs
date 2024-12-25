@@ -48,13 +48,13 @@ export default function Header() {
   return (
     <header ref={headerRef} className="relative z-[99]">
       <motion.div
-        className="fixed left-1/2 top-0 h-[4.5rem] w-full rounded-none border border-[#f4f3ee] border-opacity-40 bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] md:w-[41rem] md:rounded-full"
+        className="fixed left-1/2 top-0 h-[5.5rem] w-full rounded-none border border-[#ff7438] border-opacity-40 bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.75rem] md:w-[28rem] md:h-11 lg:w-[36rem] min-[1241px]:w-[43rem] min-[1366px]:w-[48rem] min-[1440px]:w-[48rem] md:rounded-full min-[320px]:h-24"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
       <nav className="fixed left-1/2 top-[0.15rem] flex h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-2 text-[0.9rem] font-medium transition-colors sm:w-[initial] sm:flex-nowrap sm:gap-5">
+        <ul className="flex w-full flex-wrap items-center justify-center gap-y-2 text-[0.9rem] font-medium transition-colors sm:w-[initial] sm:flex-nowrap sm:gap-5 md:grid md:grid-cols-7 lg:grid lg:grid-cols-7 min-[320px]:grid min-[320px]:grid-cols-4 min-[320px]:gap-2 min-[320px]:text-[9px]">
           {links.map((link) => (
             <motion.li
               className="relative flex h-3/4 items-center justify-center text-black dark:text-white"

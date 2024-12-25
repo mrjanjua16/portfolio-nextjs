@@ -28,7 +28,7 @@ export default function Projects() {
       id="projects"
       ref={ref}
     >
-        <SectionHeading>Projects</SectionHeading>
+        <SectionHeading><span className='text-[#ffa781]'>Projects</span></SectionHeading>
         <motion.div
             className="my-24"
               variants={containerVariants}

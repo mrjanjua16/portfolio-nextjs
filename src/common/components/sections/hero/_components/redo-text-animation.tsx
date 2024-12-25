@@ -27,33 +27,37 @@ export default function RedoTextAnimation({ delay }: IRedoTextAnimationProps) {
 
   const [aiText, setAiText] = useState(texts);
 
-  const fetchAiText = async () => {
-    try {
-      const response = await fetch('/api/text-generation', {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-      });
+  // const fetchAiText = async () => {
+  //   try {
+  //     const response = await fetch('/api/text-generation', {
+  //       method: 'GET',
+  //       headers: { 'Content-Type': 'application/json' },
+  //     });
 
-      const data = await response.json();
+  //     console.log("response :", response)
 
-      const texts = data.message
-        .trim()
-        .split('\n\n')
-        .map((line: any) => {
-          const cleanedLine = line.replace(/^[0-9]+\.\s*\"|\"\s*$/g, '').trim();
-          return cleanedLine;
-        })
-        .filter((line: any) => line !== '');
+  //     const data = await response.json();
 
-      setAiText(texts);
-    } catch (error) {
-      console.log('error :', error);
-    }
-  };
+  //     console.log("response data :", data)
 
-  useEffect(() => {
-    fetchAiText();
-  }, []);
+  //     const texts = data.message
+  //       .trim()
+  //       .split('\n\n')
+  //       .map((line: any) => {
+  //         const cleanedLine = line.replace(/^[0-9]+\.\s*\"|\"\s*$/g, '').trim();
+  //         return cleanedLine;
+  //       })
+  //       .filter((line: any) => line !== '');
+
+  //     setAiText(texts);
+  //   } catch (error) {
+  //     console.log('error :', error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   fetchAiText();
+  // }, []);
 
   const baseText = useTransform(textIndex, (latest) => {
     return aiText[latest % aiText.length] || "";

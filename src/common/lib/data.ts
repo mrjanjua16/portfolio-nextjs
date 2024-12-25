@@ -27,6 +27,10 @@ export const links = [
     id: 'about',
   },
   {
+    name: 'Offers',
+    id: 'whatIOffer',
+  },
+  {
     name: 'Projects',
     id: 'projects',
   },
@@ -204,6 +208,21 @@ export const projectsData = [
     imageUrl: liquidityPoolImage,
     link: 'https://github.com/mrjanjua16/LiquidityPool.git',
   },
+] as const;
+
+export const offers = [
+  ['Full Stack Developer', '/svgs/full-stack-developer.svg'],
+  ['Software Development', '/svgs/software-development.svg'],
+  ['Website Developer', '/svgs/website-developer.svg'],
+  ['CMS Development', '/svgs/cms-development.svg'],
+  ['Shopify Development', '/svgs/shopify-development.svg'],
+  ['Portfolio Website Development', '/svgs/portfolio-website-development.svg'],
+  ['E-commerce Solutions', '/svgs/e-commerce-website-development.svg'],
+  ['API Development & Integration:', '/svgs/api-integration.svg'],
+  ['Backend Development', '/svgs/backend-development.svg'],
+  ['Smart Contract Development', '/svgs/smart-contract-development.svg'],
+  ['ERP Solutions', '/svgs/erp-solutions.svg'],
+  ['Custom Software Solutions', '/svgs/erp-solutions.svg'],
 ] as const;
 
 export const skillsData = [

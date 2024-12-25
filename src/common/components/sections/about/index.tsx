@@ -138,7 +138,7 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <SectionHeading>About Me</SectionHeading>
+          <SectionHeading><span className='text-[#ffa781]'>About Me</span></SectionHeading>
         </motion.div>
 
         <motion.div className="mt-8 relative flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
@@ -205,7 +205,7 @@ export default function About() {
 
             <motion.div
               variants={buttonVariants}
-              whileHover="hover"
+              // whileHover="hover"
               whileTap="tap"
             >
               <Link

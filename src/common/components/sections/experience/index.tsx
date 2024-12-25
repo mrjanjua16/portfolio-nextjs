@@ -24,7 +24,7 @@ export default function Experience() {
       ref={ref}
       className="w-full scroll-mt-20 dark:bg-darkBg dark:text-white"
     >
-      <SectionHeading>My experience</SectionHeading>
+      <SectionHeading><span className='text-[#ffa781]'>My experience</span></SectionHeading>
       <VerticalTimeline animate={false}>
         {ihasMounted &&
           experiencesData.map((item, index) => (

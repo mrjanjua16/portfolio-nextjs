@@ -52,7 +52,7 @@ export default function Skills() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <SectionHeading>My skills</SectionHeading>
+        <SectionHeading><span className='text-[#ffa781]'>My skills</span></SectionHeading>
       </motion.div>
 
       <ul className="my-26 mb-[150px] flex max-w-[53rem] flex-wrap items-center justify-center gap-2 text-lg text-gray-800">

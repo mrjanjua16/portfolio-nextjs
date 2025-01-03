@@ -130,7 +130,7 @@ export const projectsData = [
   {
     title: 'Expense Management',
     description:
-      'Designed and developed a complete ERP system encompassing modules for user, RBAC, team, project tracking, CRM, employee management, attendance tracking, and automated payroll generation.',
+      'Designed and developed a complete Expense management web application encompassing modules for user management, RBAC, expense management, tracking, and automated report generation.',
     tags: [
       'TypeScript',
       'Adonisjs',
